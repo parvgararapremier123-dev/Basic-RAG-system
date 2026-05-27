@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Floating Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <button id="toggle-sidebar" class="icon-btn">☰</button>
+                <h2 class="dashboard-title">DASHBOARD</h2>
+            </div>
+            
+            <div class="sidebar-content">
+                <button id="clear-chat" class="action-btn">🗑  Clear Conversation</button>
+                <div class="library-section">
+                    <h3>DOCUMENT LIBRARY</h3>
+                    <ul id="doc-list" class="doc-list">
+                        <!-- Documents will appear here -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-chat">
+            <header class="chat-header">
+                <h1>AI Intelligence Hub <span id="status-dot" class="status-ready"></span></h1>
+                <p id="status-text">Ready</p>
+            </header>
+
+            <div id="chat-feed" class="chat-feed">
+                <!-- Chat bubbles appear here -->
+                <div class="welcome-msg">
+                    <h2>Welcome to Hub</h2>
+                    <p>Upload a PDF to start analyzing document intelligence.</p>
+                </div>
+            </div>
+
+            <!-- Fixed Bottom Control Panel -->
+            <div class="control-panel">
+                <div class="input-container glass">
+                    <button id="upload-btn" class="plus-btn">+</button>
+                    <input type="text" id="user-input" placeholder="Ask your document anything..." autocomplete="off">
+                    <button id="send-btn" class="send-btn">Send</button>
+                </div>
+                <!-- Thinking Animation -->
+                <div id="thinking-indicator" class="thinking-animation hidden">
+                    <div class="ring"></div>
+                    <span>AI is analyzing...</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+PyMuPDF
+sentence-transformers
+numpy
+pandas
+ollama
+streamlit
+gradio
+customtkinter
+eel
